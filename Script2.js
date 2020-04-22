@@ -5,11 +5,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
         let device;
         try {
-            device = await navigator.usb.requestDevice({
-                filters: [{
-                    vendorId: 0x0801
-                }]
-            });
+            device = await navigator.usb.requestDevice();
         } catch (err) {
             // No device was selected.
             console.log('No Devcice Found');
